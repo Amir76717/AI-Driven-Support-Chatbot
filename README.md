@@ -55,56 +55,43 @@ customer-support-chatbot/
 
 ### 🔧 Prerequisites
 
-- Python 3.8+  
-- pip  
-- Rasa CLI  
-- Git  
+- Python 3.8+
+- Node.js (for frontend development)
+- Rasa CLI
+- Docker (optional for deployment)
 
-### 🛠️ Steps
+### 🛠️ Setup Instructions
+**1. Clone the repository:**
 
-1️⃣ **Clone the Repository**
-```sh
-git clone https://github.com/your-username/customer-support-chatbot.git
-cd customer-support-chatbot
-```
+        git clone https://github.com/Faisalhakimi22/customer-support-chatbot.git
+        cd customer-support-chatbot
+        
+**2. Install dependencies:**
 
-2️⃣ **Install Dependencies**
-```sh
-pip install -r requirements.txt
-```
+    pip install -r requirements.txt
 
-3️⃣ **Set Up API Keys**  
-Create a `.env` file and add:
-```sh
-OPENAI_API_KEY="your_api_key_here"
-```
+**3. Configure environment variables (create a .env file):**
 
-4️⃣ **Train the Rasa Model**
-```sh
-rasa train
-```
+    OPENAI_API_KEY="your_openai_api_key_here"
 
-5️⃣ **Run the Chatbot**
-- **GPT-based**:
-  ```sh
-  python backend/chatbot.py
-  ```
-- **Rasa**:
-  ```sh
-  rasa run --enable-api
-  ```
-- **Hybrid (Rasa + GPT)**:
-  ```sh
-  python backend/hybrid_chatbot.py
-  ```
+**4. Train the Rasa model:**
 
-6️⃣ **Deploy using Docker (Optional)**
-```sh
-docker build -t chatbot .
-docker run -p 8000:8000 chatbot
-```
+    rasa train
 
----
+**5. Start the chatbot servers:**
+
+- For Rasa server:
+
+      rasa run --enable-api
+
+- For hybrid operation:
+
+      python backend/hybrid_chatbot.py
+
+**6. Deploy using Docker (optional):**
+
+    docker build -t ai-driven-support-chatbot .
+    docker run -p 8000:8000 ai-driven-support-chatbot
 
 ## ✅ Testing & Debugging
 
@@ -118,25 +105,20 @@ docker run -p 8000:8000 chatbot
 
 ## 🔥 Future Enhancements
 
-🚀 **Multilingual Support**  
-🎤 **Voice-based interaction (Speech-to-Text)**  
-🔍 **Advanced intent recognition with embeddings**  
-📊 **Admin Dashboard for Analytics**  
+🚀 **Multilingual support** to cater to a global audience. 
+
+🎤 **Voice interaction capabilities** using speech-to-text technologies. 
+
+📊 **Enhanced analytics dashboard** for real-time monitoring and insights.  
 
 ---
 
 ## 🤝 Contribution Guidelines
 
-- **Fork** the repository  
-- **Create a feature branch**  
-- **Commit changes & submit a PR**  
-- Open issues for suggestions 🚀  
-
-📩 **For support, contact:** [email](mailto:faisalh5556@gmail.com)  
+Contributions are welcome! Please fork the repository, create a new feature branch, and submit a pull request for review.
 
 ---
 
 ## 📜 License
 
 📚 **MIT License** – Open-source and free to modify.  
-© 2024 **Faisal Hakimi**
