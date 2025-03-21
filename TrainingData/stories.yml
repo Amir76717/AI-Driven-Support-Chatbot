@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: general_question
+  - action: action_ask_gpt
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: product inquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: product_inquiry
+  - action: action_ask_gpt
+  - intent: product_inquiry
+  - action: action_ask_gpt
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: technical support
+  steps:
+  - intent: technical_issue
+  - action: action_ask_gpt
+  - intent: technical_issue
+  - action: action_ask_gpt
+  - intent: speak_to_human
+  - action: utter_ask_human_handoff
+  - intent: affirm
+  - action: utter_human_handoff
+
+- story: order status check
+  steps:
+  - intent: order_status
+  - action: action_ask_gpt
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: find hotel
+  steps:
+  - intent: hotel_find_hotel
+  - action: action_query_hotel
+  - action: utter_hotel_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: book train
+  steps:
+  - intent: train_book_train
+  - action: action_query_train
+  - action: utter_train_info
+  - intent: affirm
+  - action: utter_goodbye

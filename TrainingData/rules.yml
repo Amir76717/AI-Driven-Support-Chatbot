@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Use GPT for general questions
+  steps:
+  - intent: general_question
+  - action: action_ask_gpt
+
+- rule: Use GPT for product inquiries
+  steps:
+  - intent: product_inquiry
+  - action: action_ask_gpt
+
+- rule: Use GPT for technical issues
+  steps:
+  - intent: technical_issue
+  - action: action_ask_gpt
+
+- rule: Use GPT for order status
+  steps:
+  - intent: order_status
+  - action: action_ask_gpt
+
+- rule: Use GPT for returns policy
+  steps:
+  - intent: returns_policy
+  - action: action_ask_gpt
+
+- rule: Fallback
+  steps:
+  - intent: fallback
+  - action: action_ask_gpt

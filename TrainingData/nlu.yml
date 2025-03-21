@@ -1,0 +1,181 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - greetings
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - thanks bye
+    - that's all
+    - end chat
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - ok
+    - okay
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: product_inquiry
+  examples: |
+    - Tell me about [product name](product)
+    - What are the features of [product name](product)?
+    - Do you sell [product name](product)?
+    - How much does [product name](product) cost?
+    - Is [product name](product) in stock?
+    - When will [product name](product) be available?
+    - What colors does [product name](product) come in?
+    - Do you have any information about [product name](product)?
+- intent: technical_issue
+  examples: |
+    - My product is not working
+    - I'm having a problem with my purchase
+    - The app keeps crashing
+    - I can't log in to my account
+    - The website is showing an error
+    - My download failed
+    - I'm getting an error message
+    - Something is wrong with my device
+- intent: order_status
+  examples: |
+    - Where is my order?
+    - When will my order arrive?
+    - Can you check my order status?
+    - I haven't received my order yet
+    - What's happening with order [12345](order_id)?
+    - Track my order [12345](order_id)
+    - Is my order [12345](order_id) shipped?
+    - Order status for [12345](order_id)
+- intent: returns_policy
+  examples: |
+    - How do I return an item?
+    - What's your return policy?
+    - Can I get a refund?
+    - How long do I have to return?
+    - Do you offer free returns?
+    - I want to return my purchase
+    - Return process
+    - Exchange policy
+- intent: speak_to_human
+  examples: |
+    - I want to speak to a human
+    - Can I talk to a real person?
+    - Connect me with an agent
+    - I need to speak with customer service
+    - Human representative please
+    - Agent
+    - Real person
+    - No bots
+- intent: general_question
+  examples: |
+    - What are your hours?
+    - How can I contact you?
+    - Where are you located?
+    - Do you ship internationally?
+    - What payment methods do you accept?
+    - How long is the warranty?
+    - Do you have a loyalty program?
+    - What's your privacy policy?
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you?
+- intent: fallback
+  examples: |
+    - xyz
+    - asdf
+    - qwerty
+- intent: hotel_find_hotel
+  examples: |
+    - I want to find a hotel
+    - Can you help me find a hotel?
+    - Find me a hotel in [east](area)
+    - Looking for a [cheap](pricerange) hotel
+- intent: hotel_book_hotel
+  examples: |
+    - Book a hotel for me
+    - I need to reserve a hotel
+    - Can you book a [guesthouse](hotel_type) for [2](people) people?
+    - Hotel booking for [monday](day)
+- intent: train_find_train
+  examples: |
+    - Find me a train
+    - What trains go to [cambridge](destination)?
+    - Train schedule from [london kings cross](departure)
+    - I need a train at [10:00](leaveat)
+- intent: train_book_train
+  examples: |
+    - Book a train ticket
+    - Reserve a train for [3](people) people
+    - I want a train to [norwich](destination) on [tuesday](day)
+    - Book train leaving [peterborough](departure)
+- intent: attraction_find_attraction
+  examples: |
+    - Find an attraction in [north](area)
+    - What’s a good [museum](type) to visit?
+    - Tell me about attractions nearby
+    - Any [park](type) recommendations?
+- intent: restaurant_find_restaurant
+  examples: |
+    - Find me a restaurant
+    - Recommend a [cheap](pricerange) place to eat
+    - Any [italian](food) restaurants in [west](area)?
+    - Where can I eat out?
+- intent: restaurant_book_restaurant
+  examples: |
+    - Book a table at a restaurant
+    - Reserve a spot for [4](people) people
+    - I need a restaurant booking for [friday](day) at [7pm](time)
+    - Table for [moderate](pricerange) dining
+- intent: hospital_find_hospital
+  examples: |
+    - Where’s the nearest hospital?
+    - Find a hospital with [cardiology](department)
+    - Hospital address in [south](area)
+    - Tell me about local hospitals
+- intent: taxi_book_taxi
+  examples: |
+    - Book a taxi for me
+    - I need a cab to [cambridge](destination)
+    - Taxi from [east](departure) at [5pm](leaveat)
+    - Reserve a [sedan](type) taxi
+- intent: bus_find_bus
+  examples: |
+    - Find a bus schedule
+    - What buses go to [west](destination)?
+    - Bus leaving [north](departure) on [wednesday](day)
+    - Tell me about bus routes
+- intent: police_police
+  examples: |
+    - Where’s the police station?
+    - Find [parkside police station](name)
+    - Police contact number
+    - Nearest police in [centre](area)

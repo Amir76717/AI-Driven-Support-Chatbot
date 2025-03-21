@@ -1,0 +1,615 @@
+version: "3.1"
+
+intents:
+  - hotel_find_hotel
+  - hotel_book_hotel
+  - train_find_train
+  - train_book_train
+  - attraction_find_attraction
+  - restaurant_find_restaurant
+  - restaurant_book_restaurant
+  - hospital_find_hospital
+  - taxi_book_taxi
+  - bus_find_bus
+  - police_police
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - speak_to_human
+  - general_question
+  - product_inquiry
+  - technical_issue
+  - order_status
+  - returns_policy
+  - fallback
+
+entities:
+  - pricerange
+  - hotel_type
+  - parking
+  - day
+  - people
+  - stay
+  - stars
+  - internet
+  - name
+  - area
+  - address
+  - phone
+  - postcode
+  - ref
+  - arriveby
+  - departure
+  - leaveat
+  - destination
+  - trainid
+  - price
+  - duration
+  - entrancefee
+  - openhours
+  - food
+  - time
+  - department
+  - type
+
+slots:
+  hotel_hotel-pricerange:
+    type: categorical
+    values:
+      - expensive
+      - cheap
+      - moderate
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pricerange
+  hotel_hotel-type:
+    type: categorical
+    values:
+      - guesthouse
+      - hotel
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: hotel_type
+  hotel_hotel-parking:
+    type: categorical
+    values:
+      - free
+      - no
+      - yes
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: parking
+  hotel_hotel-bookday:
+    type: categorical
+    values:
+      - monday
+      - tuesday
+      - wednesday
+      - thursday
+      - friday
+      - saturday
+      - sunday
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: day
+  hotel_hotel-bookpeople:
+    type: categorical
+    values:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: people
+  hotel_hotel-bookstay:
+    type: categorical
+    values:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: stay
+  hotel_hotel-stars:
+    type: categorical
+    values:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: stars
+  hotel_hotel-internet:
+    type: categorical
+    values:
+      - free
+      - no
+      - yes
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: internet
+  hotel_hotel-name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  hotel_hotel-area:
+    type: categorical
+    values:
+      - centre
+      - east
+      - north
+      - south
+      - west
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: area
+  hotel_hotel-address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  hotel_hotel-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  hotel_hotel-postcode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: postcode
+  hotel_hotel-ref:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ref
+  train_train-arriveby:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: arriveby
+  train_train-departure:
+    type: categorical
+    values:
+      - birmingham new street
+      - bishops stortford
+      - broxbourne
+      - cambridge
+      - ely
+      - kings lynn
+      - leicester
+      - london kings cross
+      - london liverpool street
+      - norwich
+      - peterborough
+      - stansted airport
+      - stevenage
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: departure
+  train_train-day:
+    type: categorical
+    values:
+      - monday
+      - tuesday
+      - wednesday
+      - thursday
+      - friday
+      - saturday
+      - sunday
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: day
+  train_train-bookpeople:
+    type: categorical
+    values:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 15
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: people
+  train_train-leaveat:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: leaveat
+  train_train-destination:
+    type: categorical
+    values:
+      - birmingham new street
+      - bishops stortford
+      - broxbourne
+      - cambridge
+      - ely
+      - kings lynn
+      - leicester
+      - london kings cross
+      - london liverpool street
+      - norwich
+      - peterborough
+      - stansted airport
+      - stevenage
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: destination
+  train_train-trainid:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: trainid
+  train_train-ref:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ref
+  train_train-price:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: price
+  train_train-duration:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: duration
+  attraction_attraction-area:
+    type: categorical
+    values:
+      - centre
+      - east
+      - north
+      - south
+      - west
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: area
+  attraction_attraction-name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  attraction_attraction-type:
+    type: categorical
+    values:
+      - architecture
+      - boat
+      - cinema
+      - college
+      - concerthall
+      - entertainment
+      - museum
+      - multiple sports
+      - nightclub
+      - park
+      - swimmingpool
+      - theatre
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type
+  attraction_attraction-entrancefee:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: entrancefee
+  attraction_attraction-openhours:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: openhours
+  attraction_attraction-address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  attraction_attraction-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  attraction_attraction-postcode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: postcode
+  restaurant_restaurant-pricerange:
+    type: categorical
+    values:
+      - cheap
+      - expensive
+      - moderate
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: pricerange
+  restaurant_restaurant-area:
+    type: categorical
+    values:
+      - centre
+      - east
+      - north
+      - south
+      - west
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: area
+  restaurant_restaurant-food:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: food
+  restaurant_restaurant-name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  restaurant_restaurant-bookday:
+    type: categorical
+    values:
+      - monday
+      - tuesday
+      - wednesday
+      - thursday
+      - friday
+      - saturday
+      - sunday
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: day
+  restaurant_restaurant-bookpeople:
+    type: categorical
+    values:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: people
+  restaurant_restaurant-booktime:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: time
+  restaurant_restaurant-address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  restaurant_restaurant-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  restaurant_restaurant-postcode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: postcode
+  restaurant_restaurant-ref:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ref
+  hospital_hospital-department:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: department
+  hospital_hospital-address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  hospital_hospital-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  hospital_hospital-postcode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: postcode
+  taxi_taxi-leaveat:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: leaveat
+  taxi_taxi-destination:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: destination
+  taxi_taxi-departure:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: departure
+  taxi_taxi-arriveby:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: arriveby
+  taxi_taxi-type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: type
+  taxi_taxi-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  bus_bus-departure:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: departure
+  bus_bus-destination:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: destination
+  bus_bus-leaveat:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: leaveat
+  bus_bus-day:
+    type: categorical
+    values:
+      - wednesday
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: day
+  police_police-address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  police_police-phone:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone
+  police_police-postcode:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: postcode
+  police_police-name:
+    type: categorical
+    values:
+      - parkside police station
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+
+responses:
+  utter_hotel_info:
+    - text: "Here is the information for hotel"
+  utter_train_info:
+    - text: "Here is the information for train"
+  utter_attraction_info:
+    - text: "Here is the information for attraction"
+  utter_restaurant_info:
+    - text: "Here is the information for restaurant"
+  utter_hospital_info:
+    - text: "Here is the information for hospital"
+  utter_taxi_info:
+    - text: "Here is the information for taxi"
+  utter_bus_info:
+    - text: "Here is the information for bus"
+  utter_police_info:
+    - text: "Here is the information for police"
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye, have a great day!"
+  utter_iamabot:
+    - text: "I am a bot, here to help you!"
+  utter_ask_human_handoff:
+    - text: "Would you like to speak to a human?"
+  utter_human_handoff:
+    - text: "Transferring you to a human agent."
+
+actions:
+  - action_query_hotel
+  - action_query_train
+  - action_query_attraction
+  - action_query_restaurant
+  - action_query_hospital
+  - action_query_taxi
+  - action_query_bus
+  - action_query_police
+  - action_ask_gpt
