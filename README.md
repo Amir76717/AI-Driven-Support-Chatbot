@@ -11,12 +11,12 @@ AI-Driven Support Chatbot leverages the robust capabilities of Rasa for structur
 
 ## 🌟 Features
 
-✔️ 🚀 **Hybrid AI chatbot (Rasa + GPT-4)**  
-✔️ 📲 **Multi-platform support (Web, Telegram, WhatsApp, Discord)**  
-✔️ 🔍 **Context-aware conversation flow**  
-✔️ 📈 **Logging & analytics for performance tracking**  
-✔️ ⚙️ **Customizable intent recognition & responses**  
-✔️ 🛠️ **Scalable API & cloud deployment support**  
+✔️ 🚀 **Hybrid AI Capabilities:** Combines Rasa's robust management with GPT-4's advanced NLP.  
+✔️ 📲 **Multi-Platform Integration:** Operates seamlessly across Web, Telegram, WhatsApp, and Discord.  
+✔️ 🔍 **Context-Aware Interactions:** Maintains conversational context for better user engagement. 
+✔️ 📈 **Performance Insights:** Features comprehensive logging and analytics for continual improvement.  
+✔️ ⚙️ **Customizable Responses:** Tailors interactions to meet diverse customer needs. 
+✔️ 🛠️ **Scalable Architecture:** Designed for easy scaling and integration with existing APIs and cloud services.  
 
 ---
 
@@ -24,14 +24,14 @@ AI-Driven Support Chatbot leverages the robust capabilities of Rasa for structur
 
 ```
 customer-support-chatbot/
-├─ data/             # Rasa training data (FAQs, customer queries)
-├─ models/           # Trained chatbot models
-├─ backend/          # API and chatbot logic
-├─ frontend/         # UI integrations (Telegram, Web, etc.)
-├─ logs/             # Logs interactions for analysis
-├─ requirements.txt  # Dependencies
-├─ config.yml        # Rasa chatbot configuration
-└─ README.md         # Documentation
+├─ data/             # Training data for Rasa models
+├─ models/           # Machine learning models for chatbot
+├─ backend/          # Backend logic for chat interaction
+├─ frontend/         # Frontend interfaces for chat platforms
+├─ logs/             # Interaction logs for analytics
+├─ requirements.txt  # Project dependencies
+├─ config.yml        # Rasa configuration
+└─ README.md         # Project documentation
 ```
 
 ---
