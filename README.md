@@ -12,10 +12,15 @@ AI-Driven Support Chatbot leverages the robust capabilities of Rasa for structur
 ## 🌟 Features
 
 ✔️ 🚀 **Hybrid AI Capabilities:** Combines Rasa's robust management with GPT-4's advanced NLP.  
+
 ✔️ 📲 **Multi-Platform Integration:** Operates seamlessly across Web, Telegram, WhatsApp, and Discord.  
+
 ✔️ 🔍 **Context-Aware Interactions:** Maintains conversational context for better user engagement. 
+
 ✔️ 📈 **Performance Insights:** Features comprehensive logging and analytics for continual improvement.  
+
 ✔️ ⚙️ **Customizable Responses:** Tailors interactions to meet diverse customer needs. 
+
 ✔️ 🛠️ **Scalable Architecture:** Designed for easy scaling and integration with existing APIs and cloud services.  
 
 ---
@@ -41,8 +46,8 @@ customer-support-chatbot/
 | **Backend**       | **Frontend**       | **NLP Tools**   | **Deployment**         |
 | ----------------- | ------------------ | --------------- | ---------------------- |
 | Python 🐍         | React ⚛️ / Next.js | NLTK / Spacy    | Docker 🐳              |
-| Flask / FastAPI   | Streamlit          | Hugging Face 🤗 | AWS / Firebase ☁️      |
-| OpenAI GPT / Rasa |                    | Transformers    | CI/CD (GitHub Actions) |
+| Flask / FastAPI   | Streamlit          | OpenAI GPT | AWS / Firebase ☁️      |
+| OpenAI GPT / Rasa |                    | Hugging Face🤗 Transformers    | CI/CD (GitHub Actions) |
 
 ---
 
